@@ -11,8 +11,15 @@
     },
     "devDependencies": {
         "axios": "^0.21",
+        "coffee-loader": "^2.0.0",
+        "coffeescript": "^2.5.1",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14"
+    },
+    "dependencies": {
+        "bootstrap": "^4.6.0",
+        "jquery": "^3.6.0",
+        "sweetalert2": "^10.16.6"
     }
 }

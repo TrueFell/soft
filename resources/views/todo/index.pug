@@ -1,0 +1,20 @@
+extends ../layouts/default.pug
+
+block content
+    a(class='btn', href='/todo/create') Добавить задачу
+
+    table(class="table")
+        thead
+            tr
+                - $titles = ['#', 'Задача', 'Дата создания', 'Удалить'];
+                each $val in $titles
+                    th= $val
+
+        tbody
+            each $task in $tasks
+                tr
+                    td= $task->id
+                    td= $task->content
+                    td= $task->created_at
+                    td
+                        a(data-id=$task->id, href='#', class='delete-task') X

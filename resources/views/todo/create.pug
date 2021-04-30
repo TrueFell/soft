@@ -1,0 +1,8 @@
+extends ../layouts/default.pug
+
+block content
+    div#create-from
+        .form-group
+            label(for='content') Текст задачи
+            textarea.form-control(id='content', rows=3)
+        div#create.btn.btn-primary Создать

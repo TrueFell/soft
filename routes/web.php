@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/todo', function () {
+    return view('todo/index', [
+        'tasks' => \App\Models\Task::all()
+    ]);
+});
+
+Route::get('/todo/create', function () {
+    return view('todo/create');
+});
+Route::post('/todo/create', 'TaskController@store');
+Route::get('/todo/delete/{id}', 'TaskController@delete');
